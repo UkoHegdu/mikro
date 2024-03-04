@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    echo 'Pipeline shtarted!'
 
     environment {
         EC2_HOST = 'ec2-16-171-153-194.eu-north-1.compute.amazonaws.com'
