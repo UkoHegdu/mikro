@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    echo 'Pipeline shtarted!'
+    
 
     environment {
         EC2_HOST = 'ec2-16-171-153-194.eu-north-1.compute.amazonaws.com'
@@ -38,6 +38,7 @@ RKIn5KFyykqy9WkUJi60uq25K5moe2mGw4ofU8GfqbeJtsxLhBThfjsj7cd5AHdB
     stages {
         stage('Checkout') {
             steps {
+                echo 'Pipeline shtarted!'
                 // Checkout code from Git repository
                 git 'https://github.com/UkoHegdu/mikro'
             }
