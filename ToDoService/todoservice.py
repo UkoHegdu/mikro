@@ -5,7 +5,7 @@ from sqlalchemy import create_engine
 app = Flask(__name__)
 
 # In-memory data store for todo items
-'''
+
 todos = [
     {"id": 1, "title": "Learn Flask", "completed": False},
     {"id": 2, "title": "Build Todo App", "completed": True}
@@ -21,7 +21,7 @@ DB_NAME = os.environ.get('DB_NAME')
 # Create database connection
 db_url = f'mysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}'
 engine = create_engine(db_url)
-
+'''
 # Route to get all todo items
 @app.route('/todos', methods=['GET'])
 def get_todos():
