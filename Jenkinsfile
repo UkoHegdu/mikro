@@ -41,11 +41,12 @@ RKIn5KFyykqy9WkUJi60uq25K5moe2mGw4ofU8GfqbeJtsxLhBThfjsj7cd5AHdB
             steps {
                 echo 'Pipeline shtarted!'
                 // Checkout code from Git repository
-                git 'https://github.com/UkoHegdu/mikro'
+                git 'https://github.com/UkoHegdu/mikro.git'
             }
         }
         stage('Build') {
             steps {
+                echo 'build shtarted!'
                 // Build your application
                 sh 'mvn clean package'
             }
