@@ -16,6 +16,8 @@ pipeline {
                 echo 'Pipeline shtarted!'
                 // Checkout code from Git repository
                 git 'https://github.com/UkoHegdu/mikro'
+                // To run Maven on a Windows agent, use
+                bat “mvn -Dmaven.test.failure.ignore=true clean package”
             }
         }
         stage('Build') {
