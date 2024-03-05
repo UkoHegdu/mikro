@@ -13,18 +13,16 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                echo 'Pipeline shtarted!'
+                echo 'Checkout ipeline shtarted!'
                 // Checkout code from Git repository
                 git 'https://github.com/UkoHegdu/mikro'
-                // To run Maven on a Windows agent, use
-                bat “mvn -Dmaven.test.failure.ignore=true clean package”
             }
         }
-        stage('Build') {
+        stage('Build') { 
             steps {
                 echo 'build shtarted!'
-                // Build your application
-                sh 'mvn clean package'
+                sh 'python -m py_compile server_side_rend.py' 
+                stash(name: 'compiled-results', includes: 'sources/*.py*') 
             }
         }
         stage('Test') {
