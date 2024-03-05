@@ -6,9 +6,7 @@ pipeline {
     environment {
         EC2_HOST = 'ec2-16-171-153-194.eu-north-1.compute.amazonaws.com'
         EC2_USER = 'ec2-user'
-        EC2_SSH_KEY = '''-----BEGIN RSA PRIVATE KEY-----
-i will add it later
------END RSA PRIVATE KEY-----'''
+        EC2_SSH_KEY = '/atsleegas/webserver_key_copy.pem'
     }
 
 
