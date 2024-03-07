@@ -7,5 +7,11 @@ pipeline {
                 stash(name: 'compiled-results', includes: 'sources/*.py*') 
             }
         }
+        stage('Deploy')  { 
+            steps { 
+                echo "deploying the application"
+                sh "sudo nohup python3 app.py > log.txt 2>&1 &"
+            } 
+        } 
     }
 }
