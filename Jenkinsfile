@@ -10,7 +10,7 @@ pipeline {
         stage('Deploy')  { 
             steps { 
                 echo "deploying the application"
-                sh "sudo nohup python3 app.py > log.txt 2>&1 &"
+                sh "sudo nohup python3 server_side_rend.py > log.txt 2>&1 &"
             } 
         } 
     }
